@@ -88,6 +88,14 @@ logout()
 {
   this.loggedinStatus=false;
 }
+readfee(fee):Observable<any>{
+  console.log('fee',fee);
+  
+  return this.hc.get<any>(`/readFee/${fee.studentid}`)
+}
+readPlacement(placements):Observable<any>{
+  return this.hc.get<any>(`/readPlacement/${placements.gbranch}`)
+}
 }
   
 

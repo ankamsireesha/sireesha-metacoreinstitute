@@ -72,9 +72,89 @@
                      
                     </tbody>
                   </table>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId1">
+                    placement
+                  </button>
                   
-                  <a routerLink="placement" class="btn btn-primary">placement</a>&nbsp;
-                  <a routerLink="fee" class="btn btn-primary">fee</a>
+                  <!-- Modal -->
+                  <div class="modal" id="modelId1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td>salary:</td>
+                                <td>{{this.data1.packagedetails}}</td>
+                              </tr>
+                              <tr>
+                                <td>company:</td>
+                                <td>{{this.data1.companyname}}</td>
+                              </tr>
+                              <tr>
+                                <td>vacanies:</td>
+                                <td>{{this.data1.noofvacancies}}</td>
+                                   
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>&nbsp;
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+                    fee
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Fee-Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td>Total-fee:</td>
+                                <td>{{this.data.totalfee}}</td>
+                              </tr>
+                              <tr>
+                                <td>Paid-fee:</td>
+                                <td>{{this.data.paid}}</td>
+                              </tr>
+                              <tr>
+                                <td>Due-fee:</td>
+                                <td>{{this.data.due}}</td>
+                                   
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
             </div>

@@ -474,6 +474,59 @@ app.post('/login',(req,res)=>{
 })
 
 
+app.get('/readFee/:fee',(req,res)=>{
+    console.log("fee",req.params);
+    
+    dbo.collection("fee").find({studentid:req.params.fee}).toArray((err,data)=>
+    {
+        console.log
+if(err)
+{
+   console.log("err is reading",err)
+}
+  else if(data==null)
+  {
+     res.send({message:"no data found"})
+    console.log("data is empty");
+    
+  }  
+else
+{
+    console.log(data);
+    
+   res.send({message:data})
+}
+})
+})
+
+
+
+app.get('/readPlacement/:placements',(req,res)=>{
+    console.log("branch",req.params);
+    
+    dbo.collection("placements").find({gbranch:req.params.placements}).toArray((err,data)=>
+    {
+        
+if(err)
+{
+   console.log("err is reading",err)
+}
+  else if(data==null)
+  {
+     res.send({message:"no data found"})
+    console.log("data is empty");
+    
+  }  
+else
+{
+    console.log(data);
+    
+   res.send({message:data})
+}
+})
+})
+
+
 
 const port=4500;
 app.listen(process.env.PORT||4500,()=>{
